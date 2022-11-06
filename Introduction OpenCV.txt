@@ -1,0 +1,68 @@
+Installer et de se familiariser avec la librairie de vision par ordinateur OpenCV.
+Cette librairie est disponible dans de nombreux langages de
+programmation.
+Nous utiliserons Python.
+Ainsi, ce premier TP traitera de l’installation des outils de développement nécessaires et de la
+familiarisation avec ce langage de programmation.
+A. Installation du langage de programmation Python:
+                                                                     i. Windows:
+Source: https://phoenixnap.com/kb/how-to-install-python-3-windows
+1. Téléchargez l’exécutable recommandé pour votre ordinateur
+https://www.python.org/downloads/release/python-379/
+Windows installer (32-bit or 64-bit),
+2. Lancez l’installation via l'exécutable. Dans la fenêtre du
+dialogue vous pouvez activer les cases Install launcher for all
+users et Add Python 3.7 to PATH.
+3. Dans la fenêtre du dialogue suivante vous pouvez désactiver la
+limite de longueur sur les variables de path avec Disable path
+length limit.
+4. Vérifiez l’installation de python en lançant la commande
+python dans une fenêtre CMD.
+5. Vérifiez l’installation de pip (Python Package Installer) en
+lançant la commande pip -V dans une fenêtre CMD.
+ii. Linux/Unix:
+Source: https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
+1. Naviguez vers /tmp et téléchargez le code source avec:
+cd /tmp && wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+2. Extrayez les fichiers avec:
+tar –xf Python-3.7.9.tgz
+3. Compilez et exécutez avec:
+cd python-3.7.9 && ./configure --enable–optimizations
+sudo make altinstall
+sudo make install
+4. Vérifiez l’installation avec:
+python3 --version && pip3 --version
+B. Préparation d’un environnement virtuel:
+Un environnement de travail virtuel (Virtual Environment) permet de créer un
+environnement isolé pour les projets Python. Cela signifie que chaque projet peut
+avoir ses propres dépendances, indépendamment de celles d’autres projets.
+Source: https://docs.python.org/3/library/venv.html
+i. Windows:
+1. Naviguez vers le dossier de travailler avec:
+cd c:\path_to\workspace
+2. Créez l’environnement de travail virtuel avec:
+python -m venv nom-du-VEnv
+3. Activez l’environnement avec:
+\path_to\nom-du-VEnv\Scripts\activate
+                                                      ii. linux/Unix:
+1. Naviguez vers le dossier de travailler avec:
+cd /path_to/workspace/
+2. Créez l’environnement de travail virtuel avec:
+python3.7 -m venv nom-du-VEnv
+3. Activez l’environnement avec:
+source nom-du-VEnv/bin/activate
+c. Installation d' OpenCV:
+Avec pip, toute dépendance python (e.g. opencv) peut être installée avec:
+pip install opencv-python
+d. Manipulation de python et OpenCV:
+Python est un langage de programmation de haut niveau, interprété, interactif
+et orienté objet. Un langage de programmation interprété peut être exécuté à partir
+d'une invite de commande ou à partir d’un script/programme (fichier .py).
+Vous allez opter pour un fichier.
+Le programme demandé doit réaliser les tâches suivantes :
+1. Importer OpenCV,
+2. Avec les méthodes cv2.imread() et cv2.imshow(), lire et afficher une
+image,
+3. À l’aide de la fonction cv2.cvtColor() et le flag
+cv2.COLOR_BGR2GRAY, convertir l’image en niveaux de gris,
+4. Enregistrement du résultat obtenu avec cv2.imwrite().
